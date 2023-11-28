@@ -15,8 +15,7 @@ class ImageController constructor(
     @PostMapping("/api/upload")
     fun uploadImage(
         @RequestPart(required = true) file: MultipartFile,
-        @RequestParam name: String?,
     ): String {
-        return imageService.uploadImage(file, name)
+        return imageService.uploadImage(file)
     }
 }
