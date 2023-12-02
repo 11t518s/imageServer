@@ -24,7 +24,8 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("com.h2database:h2")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("io.awspring.cloud:spring-cloud-starter-aws:2.4.1")
+	implementation("io.awspring.cloud:spring-cloud-starter-aws-secrets-manager-config:2.4.0")
 }
 
 tasks.withType<KotlinCompile> {

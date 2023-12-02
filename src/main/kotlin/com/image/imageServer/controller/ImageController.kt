@@ -1,8 +1,7 @@
-package com.group.imageServer.controller
+package com.image.imageServer.controller
 
 import com.image.imageServer.service.ImageService
 import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RequestPart
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.multipart.MultipartFile
@@ -16,6 +15,7 @@ class ImageController constructor(
     fun uploadImage(
         @RequestPart(required = true) file: MultipartFile,
     ): String {
+        println("api/upload")
         return imageService.uploadImage(file)
     }
 }
