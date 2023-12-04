@@ -1,6 +1,9 @@
 
 cloud:
   aws:
+    s3:
+      bucket: "MerakiplaceImages"
+
     credentials:
       access-key: {aws_access_key_id}
       secret-key: {aws_secret_access_key_id}
