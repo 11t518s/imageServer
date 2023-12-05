@@ -1,6 +1,6 @@
 package com.image.imageServer.service
 
-import AWSConfig
+import com.image.imageServer.config.AWSConfig
 import com.amazonaws.services.s3.AmazonS3Client
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
@@ -13,10 +13,9 @@ import java.io.IOException
 
 
 @Service
-@ComponentScan("com.image.imageServer.config.AWSConfig")
 class ImageService (
 
-     private val amazonS3Client: AmazonS3Client,
+     private val awsS3Config: AWSConfig,
 
 ){
 
