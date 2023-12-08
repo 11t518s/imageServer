@@ -16,7 +16,6 @@ class ImageController constructor(
         @RequestPart(required = true) file: MultipartFile,
     ): String {
         println("api/upload")
-//        return imageService.uploadImage(file)
-        return "aa"
+        return imageService.uploadImage(file)
     }
 }
